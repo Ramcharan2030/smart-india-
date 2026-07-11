@@ -96,25 +96,52 @@ body {
 
 /* ─── Typography utilities ─── */
 .text-hero {
-  font-size: clamp(4rem, 10vw, 11rem);
-  line-height: 0.85;
-  letter-spacing: -0.07em;
+  font-size: clamp(3rem, 8vw, 11rem);
+  line-height: 1.0;
+  letter-spacing: -0.04em;
   font-weight: 700;
   font-family: var(--font-display);
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .text-hero {
+    font-size: clamp(5rem, 10vw, 11rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+  }
 }
 
 .text-manifesto {
-  font-size: clamp(2rem, 5vw, 4.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.05em;
+  font-size: clamp(1.75rem, 4.5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   font-weight: 600;
   font-family: var(--font-display);
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .text-manifesto {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
 }
 
 .text-section-title {
-  font-size: clamp(2.5rem, 6vw, 6rem);
-  line-height: 0.9;
-  letter-spacing: -0.05em;
+  font-size: clamp(2rem, 5.5vw, 6rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .text-section-title {
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+  }
 }
 
 .text-section-label {

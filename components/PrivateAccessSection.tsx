@@ -87,7 +87,7 @@ export default function PrivateAccessSection() {
         </div>
 
         <div ref={contentRef} className="opacity-0">
-          <h2 className="text-section-title font-display font-bold text-white leading-[0.9] tracking-tight mb-8">
+          <h2 className="text-section-title font-display font-bold text-white tracking-tight mb-8">
             Not everyone{" "}
             <br />
             <span style={{ fontFamily: "var(--font-editorial)", fontStyle: "italic", color: "var(--champagne)" }}>

@@ -316,7 +316,7 @@ export default function HeroSection() {
         <div className="flex flex-col items-center gap-4 text-center px-8">
           <p className="text-section-label text-[var(--muted-ink)]">Est. 2024 — India</p>
           <h2
-            className="text-[clamp(3rem,7vw,7rem)] font-display font-bold text-[var(--ink)] leading-[0.9] tracking-[-0.05em]"
+            className="text-[clamp(2.5rem,6vw,7rem)] font-display font-bold text-[var(--ink)] tracking-tight"
           >
             Private Architectural{" "}
             <br />

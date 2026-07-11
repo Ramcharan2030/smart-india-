@@ -87,7 +87,7 @@ export default function AnthologySection() {
         {/* Intro card */}
         <div className="flex-shrink-0 w-[85vw] md:w-[40vw] flex flex-col justify-end p-8 md:p-16 pr-0">
           <h2
-            className="text-section-title font-display font-bold text-[var(--ink)] leading-[0.9] tracking-[-0.05em]"
+            className="text-section-title font-display font-bold text-[var(--ink)] tracking-tight"
           >
             Worlds We&apos;ve{" "}
             <br />

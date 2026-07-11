@@ -71,7 +71,7 @@ export default function ServicesSection() {
         {/* Header */}
         <div ref={labelRef} className="opacity-0 mb-12 md:mb-20">
           <span className="text-section-label">— Our Services</span>
-          <h2 className="mt-4 text-section-title font-display font-bold text-[var(--ink)] leading-[0.9] tracking-tight">
+          <h2 className="mt-4 text-section-title font-display font-bold text-[var(--ink)] tracking-tight">
             How We{" "}
             <span style={{ fontFamily: "var(--font-editorial)", fontStyle: "italic", color: "var(--champagne)" }}>
               Serve

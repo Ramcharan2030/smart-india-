@@ -106,7 +106,7 @@ export default function SignatureAmenitiesSection() {
         <div ref={labelRef} className="opacity-0 mb-12 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <span className="text-section-label">— Signature Amenities</span>
-            <h2 className="mt-4 text-section-title font-display font-bold text-[var(--ink)] leading-[0.9] tracking-tight">
+            <h2 className="mt-4 text-section-title font-display font-bold text-[var(--ink)] tracking-tight">
               Beyond{" "}
               <span style={{ fontFamily: "var(--font-editorial)", fontStyle: "italic", color: "var(--champagne)" }}>
                 Expectation
