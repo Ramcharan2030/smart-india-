@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 
 export default function ThreeVillaModel() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -49,6 +50,10 @@ export default function ThreeVillaModel() {
 
     // Load GLTF model
     const loader = new GLTFLoader();
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("/draco/");
+    loader.setDRACOLoader(dracoLoader);
+
     loader.load(
       "/models/villa.glb",
       (gltf) => {
@@ -110,6 +115,7 @@ export default function ThreeVillaModel() {
     return () => {
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", handleResize);
+      dracoLoader.dispose();
       renderer.dispose();
       if (mount.contains(renderer.domElement)) {
         mount.removeChild(renderer.domElement);

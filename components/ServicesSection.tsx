@@ -113,7 +113,7 @@ export default function ServicesSection() {
                 {/* Expanded content */}
                 <div
                   className="overflow-hidden transition-all duration-500"
-                  style={{ maxHeight: activeIndex === i ? "380px" : "0px" }}
+                  style={{ maxHeight: activeIndex === i ? "550px" : "0px" }}
                 >
                   <div className="pb-8 pl-8 md:pl-14">
                     <p className="text-[var(--muted-ink)] text-base leading-relaxed mb-6 max-w-md">

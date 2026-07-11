@@ -128,7 +128,7 @@ export default function FinalCTA() {
           </div>
 
           <div ref={contentRef} className="opacity-0">
-            <h2 className="text-section-title font-display font-bold text-white tracking-tight mb-8">
+            <h2 className="text-section-title font-display font-bold text-white tracking-tight" style={{ marginBottom: "2.5rem" }}>
               Your world is waiting{" "}
               <br />
               <span style={{ fontFamily: "var(--font-editorial)", fontStyle: "italic", color: "var(--champagne)" }}>
@@ -136,12 +136,12 @@ export default function FinalCTA() {
               </span>
             </h2>
 
-            <p className="text-[var(--stone)] text-xl leading-relaxed max-w-2xl mx-auto mb-16">
+            <p className="text-[var(--stone)] text-xl leading-relaxed max-w-2xl mx-auto" style={{ marginBottom: "3.5rem" }}>
               Schedule a private consultation with our lead architects. Share your vision.
               We&apos;ll show you what&apos;s possible.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center" style={{ gap: "1.5rem", marginBottom: "6rem" }}>
               <button
                 id="cta-consultation-btn"
                 onClick={() => setIsModalOpen(true)}
@@ -154,7 +154,7 @@ export default function FinalCTA() {
               </button>
             </div>
 
-            <div className="mt-24 pt-12 border-t border-[rgba(216,195,165,0.15)]">
+            <div className="pt-12 border-t border-[rgba(216,195,165,0.15)]" style={{ marginTop: "6rem" }}>
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 <div className="text-center md:text-left">
                   <div className="text-white font-display font-bold text-lg tracking-[0.15em]">
