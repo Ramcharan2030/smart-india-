@@ -22,6 +22,11 @@
     "tailwind-merge": "^2.6.1",
     "three": "^0.160.1"
   },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "@react-three/fiber": "$@react-three/fiber"
+  },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
