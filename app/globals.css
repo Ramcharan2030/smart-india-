@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* ─── SMART INDIA REALTORS — Tailwind v4 Design System ─── */
+@theme {
+  /* Colors */
+  --color-background: #F5EFE4;
+  --color-surface: #FFF8EE;
+  --color-stone: #D8C3A5;
+  --color-champagne: #C8A96A;
+  --color-bronze: #8A6A3E;
+  --color-ink: #17130F;
+  --color-muted-ink: #6F6558;
+  --color-cloud: #FFFFFF;
+  --color-mist: #EDE3D2;
+
+  /* Fonts */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Inter", system-ui, -apple-system, sans-serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+
+  /* Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-drift: drift 20s linear infinite;
+  --animate-shimmer: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes drift {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes shimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* ─── CSS Custom Properties (still used by JS/components) ─── */
+:root {
+  --background: #F5EFE4;
+  --surface: #FFF8EE;
+  --stone: #D8C3A5;
+  --champagne: #C8A96A;
+  --bronze: #8A6A3E;
+  --ink: #17130F;
+  --muted-ink: #6F6558;
+  --cloud: #FFFFFF;
+  --mist: #EDE3D2;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Inter", system-ui, -apple-system, sans-serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+
+  --ease-aureon: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out-aureon: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.3s;
+  --duration-medium: 0.6s;
+  --duration-slow: 1.2s;
+  --nav-height: 56px;
+  --nav-blur: 16px;
+  --z-base: 1;
+  --z-content: 10;
+  --z-overlay: 50;
+  --z-nav: 100;
+  --z-modal: 200;
+}
+
+/* ─── Reset & Base ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--ink);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ─── Typography utilities ─── */
+.text-hero {
+  font-size: clamp(4rem, 10vw, 11rem);
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.text-manifesto {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+
+.text-section-title {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.text-section-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--muted-ink);
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: var(--champagne);
+  color: var(--cloud);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: var(--stone); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--champagne); }
+
+/* ─── Focus ─── */
+:focus-visible {
+  outline: 2px solid var(--champagne);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+video { object-fit: cover; }
+
+/* ─── Design utilities ─── */
+.glass-warm {
+  background: rgba(245, 239, 228, 0.65);
+  backdrop-filter: blur(var(--nav-blur));
+  -webkit-backdrop-filter: blur(var(--nav-blur));
+  border: 1px solid rgba(138, 106, 62, 0.18);
+}
+
+.gradient-radial-warm {
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(200, 169, 106, 0.12) 0%,
+    transparent 70%
+  );
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
